@@ -8,13 +8,13 @@ try:
     browser = webdriver.Chrome(executable_path="O:\chromedriver_win32\chromedriver.exe")
     browser.get("http://suninjuly.github.io/registration2.html")
 
-    input1 = browser.find_element_by_css_selector("div > input")
+    input1 = browser.find_element_by_xpath('//div[@class="first_block"] //input[@class="form-control first"]')
     input1.send_keys("Roman")
 
-    input2 = browser.find_element_by_css_selector("div:nth-child(2) .second")
+    input2 = browser.find_element_by_xpath('//div[@class="first_block"] //input[@class="form-control second"]')
     input2.send_keys("Romanow")
 
-    input3 = browser.find_element_by_css_selector("div:nth-child(3) .third")
+    input3 = browser.find_element_by_xpath('//div[@class="first_block"] //input[@class="form-control third"]')
     input3.send_keys("Roma@mail.ru")
 
     button = browser.find_element_by_xpath('//button')
